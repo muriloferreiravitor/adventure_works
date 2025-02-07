@@ -1,0 +1,58 @@
+version: 2
+
+sources:
+  - name: sales
+    schema: raw_adventure_works
+    tables:
+      - name: creditcard
+        columns:
+        - name: creditcardid
+          tests:
+          - unique
+          - not_null
+      - name: customer
+        columns:
+          - name: customerid
+            tests:
+              - unique
+              - not_null
+      - name: personcreditcard
+        columns:
+          - name: businessentityid
+            tests:
+              - unique
+              - not_null
+      - name: salesorderdetail
+        columns:
+          - name: salesorderid
+            tests:
+              - not_null
+      - name: salesorderheader
+        columns:
+          - name: salesorderid
+            tests:
+              - unique
+              - not_null
+      - name: salesorderheadersalesreason
+        columns:
+          - name: salesorderid
+            tests:
+              - not_null
+      - name: salesperson
+        columns:
+          - name: businessentityid
+            tests:
+              - unique
+              - not_null
+      - name: salesreason
+        columns:
+          - name: salesreasonid
+            tests:
+              - unique
+              - not_null
+      - name: salesterritory
+        columns:
+          - name: territoryid
+            tests:
+              - unique
+              - not_null

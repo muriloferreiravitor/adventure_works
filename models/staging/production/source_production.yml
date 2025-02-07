@@ -1,0 +1,25 @@
+
+version: 2
+
+sources:
+  - name: production
+    schema: raw_adventure_works
+    tables:
+      - name: product
+        columns:
+          - name: productid
+            tests:
+              - unique
+              - not_null
+      - name: productsubcategory
+        columns:
+          - name: productsubcategoryid
+            tests:
+              - unique
+              - not_null
+      - name: productcategory
+        columns:
+          - name: productcategoryid
+            tests:
+              - unique
+              - not_null
