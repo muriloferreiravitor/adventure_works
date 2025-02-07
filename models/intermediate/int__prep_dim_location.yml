@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: int__prep_dim_location
+    columns:
+      - name: sk_region
+        tests: 
+          - unique
+          - not_null
+      - name: addressid
+        tests: 
+          - unique
+          - not_null
