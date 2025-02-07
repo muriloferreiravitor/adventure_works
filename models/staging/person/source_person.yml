@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: person
+    schema: raw_adventure_works
+    tables:
+      - name: person
+        columns:
+          - name: businessentityid
+            tests:
+              - unique
+              - not_null
+      - name: address
+        columns:
+          - name: addressid
+            tests:
+              - unique
+              - not_null
+      - name: countryregion
+        columns:
+          - name: countryregioncode
+            tests:
+              - unique
+              - not_null
+      - name: stateprovince
+        columns:
+          - name: stateprovinceid
+            tests:
+              - unique
+              - not_null
