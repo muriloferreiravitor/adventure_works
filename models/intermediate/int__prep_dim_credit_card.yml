@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: int__prep_dim_credit_card
+    columns:
+      - name: sk_credit_card
+        tests:  
+          - unique
+          - not_null
+      - name: creditcardid
+        tests:  
+          - unique
+          - not_null        
+      - name: cardtype
+        tests:  
+          - not_null 

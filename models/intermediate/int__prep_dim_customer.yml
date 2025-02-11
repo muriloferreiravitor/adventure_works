@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: int__prep_dim_customer
+    columns:
+      - name: sk_customer
+        tests:  
+          - unique
+          - not_null
+      - name: customerid
+        tests: 
+          - unique
+          - not_null
+      - name: businessentityid
+        tests: 
+          - unique

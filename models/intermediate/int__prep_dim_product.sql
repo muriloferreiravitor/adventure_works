@@ -26,10 +26,8 @@ with
             , product_subcategory.product_subcategory
             , product_category.product_category
         from product
-        left join product_subcategory
-            on product.productsubcategoryid = product_subcategory.productsubcategoryid
-        left join product_category
-            on product_subcategory.productcategoryid = product_category.productcategoryid
+        left join product_subcategory on product.productsubcategoryid = product_subcategory.productsubcategoryid
+        left join product_category on product_subcategory.productcategoryid = product_category.productcategoryid
     )
 
     , prep_dim_product as (
