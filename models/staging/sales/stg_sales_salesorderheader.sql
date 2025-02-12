@@ -12,8 +12,18 @@ with
             , territoryid
             , salespersonid
             , shiptoaddressid            
-            , status 
-            , onlineorderflag
+            , case
+                when status = 1 then 'In process'
+                when status = 2 then 'Approved'
+                when status = 3 then 'Backordered'
+                when status = 4 then 'Rejected'
+                when status = 5 then 'Shipped'
+                when status = 6 then 'Cancelled'
+            end as sales_status
+            , case
+                when onlineorderflag = true then 'Online'
+                when onlineorderflag = false then 'Physical'
+            end as sales_channel
             , creditcardid
             , subtotal
             , taxamt
