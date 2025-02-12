@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: int__prep_dim_reason
+    columns:
+      - name: sk_reason
+        tests: 
+          - unique
+          - not_null

@@ -7,7 +7,7 @@ with
     , sales_reason as (
         select 
             salesreasonid
-            , name as reason_name
+            , name as reason
             , reasontype
             , modifieddate
         from source

@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: int__prep_dim_product
+    columns:
+      - name: sk_product
+        tests: 
+          - unique
+          - not_null
+      - name: productid
+        tests: 
+          - unique
+          - not_null
+      - name: productnumber
+        tests:
+          - unique
+          - not_null

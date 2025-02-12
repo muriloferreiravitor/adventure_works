@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: int__prep_fct_sales_order
+    columns:
+      - name: sk_sales_order
+        tests: 
+          - unique
+          - not_null
+      - name: salesorderdetailid
+        tests: 
+          - unique
+          - not_null
+      - name: salesorderid
+        tests: 
+          - not_null
