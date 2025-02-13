@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: fct_sales_order
+    columns:
+      - name: sk_sales_order
+        tests: 
+          - unique
+          - not_null
+      - name: fk_calendar
+        tests:
+          - relationships:
+              to: ref('dim_calendar')
+              field: sk_calendar
+          - not_null
+      - name: fk_credit_card
+        tests:
+          - relationships:
+              to: ref('dim_credit_card')
+              field: sk_credit_card
+      - name: fk_customer
+        tests:
+          - relationships:
+              to: ref('dim_customer')
+              field: sk_customer
+      - name: fk_location
+        tests:
+          - relationships:
+              to: ref('dim_location')
+              field: sk_location
+          - not_null
+      - name: fk_product
+        tests:
+          - relationships:
+              to: ref('dim_product')
+              field: sk_product
+          - not_null
+      - name: fk_reason
+        tests:
+          - relationships:
+              to: ref('dim_reason')
+              field: sk_reason
+# TODO: demais testes
+      - name: salesorderid
+        tests:  
+          - not_null
+      - name: sales_status
+        tests:
+          - not_null
+      - name: sales_channel
+        tests:
+          - not_null

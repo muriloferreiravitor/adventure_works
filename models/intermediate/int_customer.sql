@@ -20,7 +20,7 @@ with
         where person.persontype = 'IN'
     )
 
-    , prep_dim_customer as (
+    , int_customer as (
         select
             {{ dbt_utils.generate_surrogate_key(['customerid', 'businessentityid', 'fullname']) }} as sk_customer
             , *
@@ -28,4 +28,4 @@ with
     )    
 
 select *
-from prep_dim_customer
+from int_customer

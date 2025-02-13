@@ -3,7 +3,7 @@ with
         {{ dbt_date.get_date_dimension("2011-01-01", "2014-12-31")}}
     )
 
-    , prep_dim_calendar as (
+    , int_calendar as (
         select
             {{ dbt_utils.generate_surrogate_key(['date_day', 'day_of_week_name']) }} as sk_calendar
             , *
@@ -11,4 +11,4 @@ with
     )
 
 select *
-from prep_dim_calendar
+from int_calendar

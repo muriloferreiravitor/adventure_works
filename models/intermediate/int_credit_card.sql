@@ -18,7 +18,7 @@ with
         left join person_credit_card on credit_card.creditcardid = person_credit_card.creditcardid
     )
 
-    , prep_dim_credit_card as (
+    , int_credit_card as (
         select 
             {{ dbt_utils.generate_surrogate_key(['creditcardid', 'cardtype']) }} as sk_credit_card
             , *
@@ -26,4 +26,4 @@ with
     )    
 
 select *
-from prep_dim_credit_card
+from int_credit_card

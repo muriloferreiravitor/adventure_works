@@ -13,7 +13,7 @@ with
         select
             sales_order_detail.salesorderdetailid
             , sales_order_header.salesorderid
-            , sales_order_header.billtoaddressid
+            , sales_order_header.addressid
             , sales_order_header.customerid
             , sales_order_header.territoryid
             , sales_order_header.salespersonid
@@ -43,7 +43,7 @@ with
         select
             salesorderdetailid
             , salesorderid
-            , billtoaddressid
+            , addressid
             , customerid
             , territoryid
             , salespersonid
@@ -69,7 +69,7 @@ with
         from joined_atomic_orders
     )
 
-    , prep_fct_sales_order as (
+    , int_sales_order as (
         select 
             {{ dbt_utils.generate_surrogate_key(['salesorderdetailid', 'salesorderid']) }} as sk_sales_order
             , *
@@ -77,4 +77,4 @@ with
     )    
 
 select *
-from prep_fct_sales_order
+from int_sales_order

@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: int__prep_dim_reason
+  - name: int_reason
     columns:
       - name: sk_reason
         tests: 

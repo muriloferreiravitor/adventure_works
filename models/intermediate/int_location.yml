@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: int__prep_dim_location
+  - name: int_location
     columns:
       - name: sk_location
         tests: 

@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: int__prep_dim_calendar
+  - name: int_calendar
     description: "This is a table created using the dbt calendar macro."
     columns:
       - name: sk_calendar

@@ -18,7 +18,7 @@ with
         group by sales_order_header_sales_reason.salesorderid
     )
 
-    , prep_dim_reason as (
+    , int_reason as (
         select
             {{ dbt_utils.generate_surrogate_key(['salesorderid', 'reason_agg']) }} as sk_reason
             , *
@@ -26,4 +26,4 @@ with
     )
 
 select *
-from prep_dim_reason
+from int_reason

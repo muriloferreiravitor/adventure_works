@@ -37,7 +37,7 @@ with
         left join sales_territory on state_province.territoryid = sales_territory.territoryid
     )
 
-    , prep_dim_location as (
+    , int_location as (
         select
             {{ dbt_utils.generate_surrogate_key(['addressid', 'addressline', 'city']) }} as sk_location
             , *
@@ -45,4 +45,4 @@ with
     )    
 
 select *
-from prep_dim_location
+from int_location
