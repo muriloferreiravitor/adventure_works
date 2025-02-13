@@ -7,11 +7,12 @@ with
     , sales_order_header as (
         select 
             salesorderid
-            , billtoaddressid
+            , billtoaddressid as addressid
             , customerid
             , territoryid
             , salespersonid
             , shiptoaddressid            
+            , creditcardid
             , case
                 when status = 1 then 'In process'
                 when status = 2 then 'Approved'
@@ -24,7 +25,6 @@ with
                 when onlineorderflag = true then 'Online'
                 when onlineorderflag = false then 'Physical'
             end as sales_channel
-            , creditcardid
             , subtotal
             , taxamt
             , freight

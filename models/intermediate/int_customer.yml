@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: int__prep_dim_customer
+  - name: int_customer
     columns:
       - name: sk_customer
         tests:  
