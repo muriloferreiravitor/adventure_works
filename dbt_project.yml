@@ -36,7 +36,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  adventure_works__aec: # <-- Name of the project. If you rename your project, you must change this as well.
+  aec__adventure_works: # <-- Name of the project. If you rename your project, you must change this as well.
 
     marts:
       +materialized: table
