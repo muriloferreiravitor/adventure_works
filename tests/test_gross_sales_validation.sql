@@ -1,8 +1,6 @@
-/*  TODO: ATUALIZAR
-
-    Este teste garante que as vendas de 2011 estão
-    corretas com o valor auditado da contabilidade:
-    R$ 12646112.16
+/*
+    This test ensures that the 2011 sales are correct based on the audited accounting value:
+    $12,646,112.16
 */
 
 with

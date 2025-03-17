@@ -5,51 +5,79 @@ sources:
     schema: raw_adventure_works
     tables:
       - name: creditcard
+        description: "Customer credit card information."
         columns:
         - name: creditcardid
           tests:
           - unique
           - not_null
+        - name: cardtype
+          description: "Credit card type (e.g., SuperiorCard, Distinguish, Vista, ColonialVoice)."
+
       - name: customer
         columns:
           - name: customerid
             tests:
               - unique
               - not_null
+
       - name: personcreditcard
+        description: >
+          "Cross-reference table mapping people to their credit card information in the creditcard table."
         columns:
           - name: businessentityid
             tests:
               - unique
               - not_null
+
       - name: salesorderdetail
+        description: "Individual products linked to a specific sales order. Refer to salesorderheader for more details."
         columns:
           - name: salesorderid
             tests:
               - not_null
+
       - name: salesorderheader
+        description: "General information about sales orders."
         columns:
           - name: salesorderid
             tests:
               - unique
               - not_null
+          - name: sales_status
+            description: >
+              "Current order status: 1 = In process; 2 = Approved; 3 = Backordered; 4 = Rejected; 5 = Shipped; 6 = Cancelled"
+          - name: sales_channel
+            description: "Sales channel: Online or Physical"
+          - name: subtotal
+            description: >
+              "Sales subtotal is the same as the sum of stg_sales_salesorderdetail.total_net for the corresponding salesorderid."
+          - name: taxamt
+            description: "Tax amount."
+          - name: freight
+            description: "Freight cost."
+          - name: totaldue
+            description: "Total amount due for the each salesorderid. Computed as subtotal + taxamt + freight."
+
       - name: salesorderheadersalesreason
+        description: "Cross-reference table mapping salesorderheader to salesreason."
         columns:
           - name: salesorderid
             tests:
               - not_null
-      - name: salesperson
-        columns:
-          - name: businessentityid
-            tests:
-              - unique
-              - not_null
+
       - name: salesreason
+        description: "Lookup table of customer purchase reasons."
         columns:
           - name: salesreasonid
             tests:
               - unique
               - not_null
+          - name: reason  
+            description: "Sales reason description."
+          - name: reasontype
+            description: "Category the sales reason belongs to."
+
       - name: salesterritory
         columns:
           - name: territoryid

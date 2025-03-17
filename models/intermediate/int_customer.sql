@@ -13,7 +13,6 @@ with
         select 
             customer.customerid
             , person.businessentityid
-            , customer.storeid
             , person.fullname
         from customer
         left join person on customer.customerid = person.businessentityid

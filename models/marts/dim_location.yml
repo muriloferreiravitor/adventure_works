@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: dim_location
+    description: "This dimension table consolidates information about customer-related addresses, cities, states/provinces, and countries/regions."
+    columns:
+      - name: sk_region
+        description: "Surrogate key uniquely identifying each location record, derived from addressid, addressline1, and city."
+      - name: addressid
+        description: "Unique identifier for the address record. Primary key."
+      - name: stateprovinceid
+        description: "Unique identifier for the state or province. Foreign key referencing stateprovince.stateprovinceid."
+      - name: territoryid
+        description: "Identifier for the sales territory where the state or province is located. Foreign key referencing salesterritory.territoryid."
+      - name: addressline1
+        description: "First line of the address, typically including street name and number."
+      - name: city
+        description: "Name of the city where the address is located."
+      - name: state_name
+        description: "Name of the state or province."
+      - name: stateprovincecode
+        description: "ISO-standard code representing the state or province."
+      - name: country_name
+        description: "Name of the country or region."
+      - name: countryregioncode
+        description: "ISO-standard code representing the country or region. Foreign key referencing countryregion.countryregioncode."
+      - name: continent
+        description: "Name of the continent associated with the sales territory."

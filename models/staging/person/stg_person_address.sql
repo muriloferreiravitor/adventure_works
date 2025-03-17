@@ -7,7 +7,7 @@ with
     , address as (
         select 
             addressid
-            , addressline1 as addressline
+            , addressline1
             , city
             , stateprovinceid
             , modifieddate

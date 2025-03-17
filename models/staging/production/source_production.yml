@@ -6,20 +6,33 @@ sources:
     schema: raw_adventure_works
     tables:
       - name: product
+        description: "Products sold or used in the manfacturing of sold products."
         columns:
           - name: productid
             tests:
               - unique
               - not_null
-      - name: productsubcategory
+          - name: productnumber
+            description: "Unique product identification number."
+          - name: productline
+            description: "R = Road, M = Mountain, T = Touring, S = Standard"
+          - name: style
+            description: "W = Womens, M = Mens, U = Universal"
+          - name: listprice
+            description: "Selling price."
+
+      - name: productcategory
+        description: "High-level product categorization."
         columns:
-          - name: productsubcategoryid
+          - name: productcategoryid
             tests:
               - unique
               - not_null
-      - name: productcategory
+
+      - name: productsubcategory
+        description: "Product subcategories associated with the 'productcategory' table."
         columns:
-          - name: productcategoryid
+          - name: productsubcategoryid
             tests:
               - unique
               - not_null

@@ -1,8 +1,6 @@
-/*  TODO: ATUALIZAR
-
-    Este teste garante que as vendas de 2012 estão
-    corretas com o valor auditado da contabilidade:
-    R$ 226298.5
+/*
+    This test is used to verify the consistency of the quantity of orders over time.
+    The quantity of orders from 2011-05-31 to 2014-06-30 is 31,465.
 */
 
 with

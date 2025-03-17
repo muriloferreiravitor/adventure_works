@@ -24,7 +24,7 @@ with
             address.addressid
             , address.stateprovinceid
             , state_province.territoryid
-            , address.addressline
+            , address.addressline1
             , address.city
             , state_province.state_name
             , state_province.stateprovincecode
@@ -39,7 +39,7 @@ with
 
     , int_location as (
         select
-            {{ dbt_utils.generate_surrogate_key(['addressid', 'addressline', 'city']) }} as sk_location
+            {{ dbt_utils.generate_surrogate_key(['addressid', 'addressline1', 'city']) }} as sk_location
             , *
         from joined_location
     )    
