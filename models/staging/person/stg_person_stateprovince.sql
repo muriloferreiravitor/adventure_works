@@ -7,10 +7,10 @@ with
     , state_province as (
         select 
             stateprovinceid
-            , name as state_name
             , territoryid
             , stateprovincecode
             , countryregioncode
+            , name as state_name
             , modifieddate
         from source
     )

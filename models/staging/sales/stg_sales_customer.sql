@@ -15,4 +15,4 @@ with
     )
 
 select *
-from customer 
+from customer

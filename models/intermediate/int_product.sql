@@ -22,6 +22,7 @@ with
             , product.product_name
             , product.productnumber
             , product.color
+            , product.size
             , product.style
             , product_subcategory.product_subcategory
             , product_category.product_category

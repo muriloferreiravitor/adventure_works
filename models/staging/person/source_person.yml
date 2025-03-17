@@ -4,25 +4,42 @@ sources:
   - name: person
     schema: raw_adventure_works
     tables:
-      - name: person
-        columns:
-          - name: businessentityid
-            tests:
-              - unique
-              - not_null
       - name: address
+        description: "Street address information for customers, employees, and vendors."
         columns:
           - name: addressid
             tests:
               - unique
               - not_null
+
       - name: countryregion
+        description: "Lookup table containing the ISO standard codes for countries and regions."
         columns:
           - name: countryregioncode
             tests:
               - unique
               - not_null
+
+      - name: person
+        description: >
+          Individuals associated with AdventureWorks, including employees, customer contacts, and vendor contacts.
+        columns:
+          - name: businessentityid
+            tests:
+              - unique
+              - not_null
+          - name: persontype
+            description: >
+              Type of person:
+              - SC = Store Contact
+              - IN = Individual (retail customer)
+              - SP = Salesperson
+              - EM = Employee (non-sales)
+              - VC = Vendor Contact 
+              - GC = General Contact
+
       - name: stateprovince
+        description: "State and province lookup table."
         columns:
           - name: stateprovinceid
             tests:

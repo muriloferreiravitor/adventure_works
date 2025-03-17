@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: dim_credit_card
+    description: "This dimension table consolidates information about customers' credit cards."
+    columns:
+      - name: sk_creditcard
+        description: "Surrogate key uniquely identifying each credit card record, derived from creditcardid and cardtype."
+      - name: creditcardid
+        description: "Unique identifier for the credit card. Serves as a foreign key referencing creditcard.creditcardid."
+      - name: businessentityid
+        description: "Unique identifier for the business entity. Serves as a foreign key referencing person.businessentityid."
+      - name: cardtype
+        description: "Type or brand of the credit card"

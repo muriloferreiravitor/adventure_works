@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: "This dimension table consolidates customer information."
+    columns:
+      - name: sk_customer
+        description: "Surrogate key uniquely identifying each customer record, derived from customerid, businessentityid, and fullname."
+      - name: customerid
+        description: "Unique identifier for the customer. Primary key."
+      - name: businessentityid
+        description: "Unique identifier for the business entity associated with the customer. Primary key for person records."
+      - name: fullname
+        description: "Customer's full name. This field may be null if the customer chooses not to provide personal data at the time of purchase."

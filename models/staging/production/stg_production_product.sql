@@ -12,8 +12,17 @@ with
             , productnumber
             , color
             , size
-            , productline
-            , style
+            , case
+                when TRIM(productline) = 'R' then 'Road'
+                when TRIM(productline) = 'M' then 'Mountain'
+                when TRIM(productline) = 'T' then 'Touring'
+                when TRIM(productline) = 'S' then 'Standard'
+            end as productline
+            , case
+                when TRIM(style) = 'W' then 'Womens'
+                when TRIM(style) = 'M' then 'Mens'
+                when TRIM(style) = 'U' then 'Universal'
+            end as style
             , standardcost
             , listprice
             , modifieddate
