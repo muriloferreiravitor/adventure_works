@@ -2,7 +2,7 @@
 This repository contains the solution developed by **Murilo Ferreira Vitor** to obtain the **Analytics Engineering Certification by Indicium**.
 
 ## Context
-This project was developed to showcase my skills as an **Analytics Engineer**, transforming a database from an **OLTP** environment into **OLAP** for consumption in a **Data Warehouse** and a **BI tool**. The database used is **Adventure Works**, a sample database from Microsoft for **online transaction processing (OLTP)**. Adventure Works simulates a fictional multinational manufacturing company called **Adventure Works Cycles**.
+This project was developed to demonstrate skills as an **Analytics Engineer**, transforming a database from an **OLTP** environment into **OLAP** for consumption in a **Data Warehouse** and a **BI tool**. The database used is **Adventure Works**, a sample database from Microsoft for **OLTP**. Adventure Works database simulates a fictional multinational manufacturing company called **Adventure Works Cycles**.
 
 ### Objective
 The goal of this project was to build a **modern analytics platform** for **Adventure Works (AW)**, focusing on the following key aspects:
@@ -10,11 +10,11 @@ The goal of this project was to build a **modern analytics platform** for **Adve
 - Develop a cutting-edge **Modern Analytics Stack (MAS)**.
 - Apply **dimensional modeling**, converting an **OLTP** environment into an **OLAP** structure within the Data Warehouse.
 - Showcase expertise in **SQL**, **dbt**, and **Self-Service BI tools** to generate reports and insights.
-- Ensure **data accuracy and reliability** by implementing both built-in and business-driven validation tests, as well as addressing strategic questions posed by the AW leadership team.
+- Ensure **data accuracy and reliability** by implementing both built-in and business-driven validation tests, as well as addressing strategic questions posed by the AW stakeholders.
 
 ### About the Company
 Adventure Works is a fast-growing manufacturing company with a portfolio of **500+ products**, **20,000 customers**, and **31,000 registered orders**.
 
-To become a **data-driven** organization, the company prioritized the **Sales** department, integrating key data from SAP (ERP), Salesforce (CRM), and Google Analytics (Web Analytics).
+To become a **data-driven** organization, the first step of the project was to prioritize the Sales department by integrating key data from SAP (ERP), Salesforce (CRM), and Google Analytics (Web Analytics).
 
 The CEO emphasized the importance of **data accuracy**, requesting validation tests to align reported figures with audited financial records, ensuring trust in the analytics platform. The system must verify that the **2011 gross sales total of $12,646,112.16**.
