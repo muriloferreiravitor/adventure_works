@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: int__prep_fct_sales_order
+  - name: int_sales_order
     columns:
       - name: sk_sales_order
         tests: 
