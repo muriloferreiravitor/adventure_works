@@ -55,7 +55,7 @@ Development of a **Power BI DataViz Dashboard** featuring:
 - **GitHub**: Version control and documentation.  
 
 ## **How to Access**  
-- [Conceptual Model](#) <!-- Insert link -->  
+- [Conceptual Diagram](https://github.com/muriloferreiravitor/adventure_works/blob/main/Conceptual%20Diagram.pdf)
 - [dbt Project Documentation](https://muriloferreiravitor.github.io/adventure_works/)  
 - [Power BI Dashboard](#) <!-- Insert link -->  
 - [Presentation Video](#) <!-- Insert link -->  
