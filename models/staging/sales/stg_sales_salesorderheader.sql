@@ -32,7 +32,7 @@ with
             , cast(orderdate as date) as orderdate
             , cast(duedate as date) as duedate
             , cast(shipdate as date) as shipdate
-            , modifieddate
+            , cast(modifieddate as date) as modifieddate
         from source
     )
 

@@ -6,6 +6,9 @@ models:
     columns:
       - name: sk_reason
         description: "Surrogate key uniquely identifying each reason record, derived from salesorderid and reason_agg."
+        tests: 
+          - unique
+          - not_null
       - name: salesorderid
         description: "Unique identifier for the sales order. Foreign key referencing salesorderheader.salesorderid."
       - name: reason_agg

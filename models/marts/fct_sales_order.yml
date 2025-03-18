@@ -50,6 +50,14 @@ models:
           - relationships:
               to: ref('dim_reason')
               field: sk_reason
+      - name: orderdate
+        description: "The date when the order was placed by the customer."
+      - name: duedate
+        description: "The expected delivery date of the order."
+      - name: shipdate
+        description: "The date when the order was shipped to the customer."
+      - name: modifieddate
+        description: "The last date when the order record was modified."
       - name: salesorderid
         description: "Primary key of the salesorderheader"
         tests:  

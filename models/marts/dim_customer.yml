@@ -5,10 +5,20 @@ models:
     description: "This dimension table consolidates customer information."
     columns:
       - name: sk_customer
-        description: "Surrogate key uniquely identifying each customer record, derived from customerid, businessentityid, and fullname."
+        description: >
+          Surrogate key uniquely identifying each customer record, derived from customerid, businessentityid, and fullname.
+        tests:  
+          - unique
+          - not_null
       - name: customerid
         description: "Unique identifier for the customer. Primary key."
+        tests:  
+          - unique
+          - not_null
       - name: businessentityid
         description: "Unique identifier for the business entity associated with the customer. Primary key for person records."
+        tests:  
+          - unique
       - name: fullname
-        description: "Customer's full name. This field may be null if the customer chooses not to provide personal data at the time of purchase."
+        description: >
+          Customer's full name. This field may be null if the customer chooses not to provide personal data at the time of purchase.
