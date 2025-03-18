@@ -19,13 +19,13 @@ To become a **data-driven** organization, the first step of the project was to p
 
 The CEO emphasized the importance of **data accuracy**, requesting validation tests to align reported figures with audited financial records, ensuring trust in the analytics platform. The system must verify that the **2011 gross sales total of $12,646,112.16**.
 
-### **Project Structure**  
+## **Project Structure**  
 
-#### **1. Data Modeling**  
+### **1. Data Modeling**  
 Dimensional modeling implemented in the **Snowflake Data Warehouse**.  
 
 - **Fact Table**:  
-  - **Sales Order** (granularity at the product level associated with the corresponding sales order)  
+  - Sales Order (granularity at the product level associated with the corresponding sales order)  
 
 - **Dimensions**:  
   - Calendar  
@@ -35,29 +35,30 @@ Dimensional modeling implemented in the **Snowflake Data Warehouse**.
   - Product  
   - Reason  
 
-#### **2. Data Ingestion and Transformation**  
+### **2. Data Ingestion and Transformation**  
 Leveraging **dbt Cloud** to:  
   - Build and document data models.  
   - Implement data quality tests.  
   - Ensure compliance with business rules.  
 
-#### **3. Data Visualization and Analysis**  
+### **3. Data Visualization and Analysis**  
 Development of a **Power BI DataViz Dashboard** featuring:  
   - Sales metrics.  
   - Trend analysis.  
   - Key strategic insights.  
 
-### **Technologies Used**  
+## **Technologies Used**  
 - **dbt**: Data modeling, transformation, testing, and documentation.  
 - **SQL**: Querying and data validation.  
 - **Snowflake**: Data warehouse for storage.  
 - **Power BI**: DataViz tool for interactive reporting.  
 - **GitHub**: Version control and documentation.  
 
-### **How to Access**  
+## **How to Access**  
 - [Conceptual Model](#) <!-- Insert link -->  
+- [dbt Project Documentation](https://muriloferreiravitor.github.io/adventure_works/)  
 - [Power BI Dashboard](#) <!-- Insert link -->  
 - [Presentation Video](#) <!-- Insert link -->  
 
-### **Contact**  
+## **Contact**  
 For any questions or suggestions, feel free to connect via [LinkedIn](https://linkedin.com/in/muriloferreiravitor).
