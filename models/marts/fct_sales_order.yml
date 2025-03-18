@@ -2,51 +2,86 @@ version: 2
 
 models:
   - name: fct_sales_order
+    description: >
+      Fact table containing general sales order information, including details of individual products associated with each sales order.
     columns:
       - name: sk_sales_order
+        description: >
+          Surrogate key uniquely identifying each sales order line item. Derived from salesorderdetailid and salesorderid.
         tests: 
           - unique
           - not_null
       - name: fk_calendar
+        description: "Foreign key to the calendar dimension."
         tests:
           - relationships:
               to: ref('dim_calendar')
               field: sk_calendar
           - not_null
       - name: fk_credit_card
+        description: "Foreign key to the credit card dimension."
         tests:
           - relationships:
               to: ref('dim_credit_card')
               field: sk_credit_card
       - name: fk_customer
+        description: "Foreign key to the customer dimension."
         tests:
           - relationships:
               to: ref('dim_customer')
               field: sk_customer
       - name: fk_location
+        description: "Foreign key to the location dimension."
         tests:
           - relationships:
               to: ref('dim_location')
               field: sk_location
           - not_null
       - name: fk_product
+        description: "Foreign key to the product dimension."
         tests:
           - relationships:
               to: ref('dim_product')
               field: sk_product
           - not_null
       - name: fk_reason
+        description: "Foreign key to the reason dimension."
         tests:
           - relationships:
               to: ref('dim_reason')
               field: sk_reason
-# TODO: demais testes
       - name: salesorderid
+        description: "Primary key of the salesorderheader"
         tests:  
           - not_null
       - name: sales_status
+        description: >
+          Current status of the sales order (e.g., In process, Approved, Backordered, Rejected, Shipped or Cancelled).
         tests:
           - not_null
       - name: sales_channel
+        description: "Sales channel through which the order was placed (e.g., Online or Physical store)"
         tests:
           - not_null
+      - name: orderqty
+        description: "Quantity of the product ordered in this sales order line."
+      - name: unitprice
+        description: "Price per unit of the product at the time of sale."
+      - name: unitpricediscount
+        description: "Discount applied per unit of the product."
+      - name: had_discount
+        description: "Flag indicating whether a discount was applied to this sales order line (e.g., true/false)."
+      - name: total_discount
+        description: "Total discount amount applied to this sales order line (orderqty * unitpricediscount)."
+      - name: total_gross
+        description: "Total gross amount for this sales order line before any discounts or adjustments (orderqty * unitprice)."
+      - name: total_net
+        description: >
+          Total net amount for this sales order line after applying discounts, calculated as:
+          (unitprice * (1 - unitpricediscount) * orderqty).
+      - name: prorated_freight
+        description: "Proportional freight cost allocated to this sales order line."
+      - name: prorated_taxamt
+        description: "Proportional tax amount allocated to this sales order line."
+      - name: linetotal
+        description: "Final total amount for this sales order line, including discounts, taxes, and prorated freight."
