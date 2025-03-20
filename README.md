@@ -55,6 +55,7 @@ Development of a **Power BI DataViz Dashboard** featuring:
 - **GitHub**: Version control and documentation.  
 
 ## **How to Access**  
+- [Entity Relationship Diagram](https://github.com/muriloferreiravitor/adventure_works/blob/main/AdventureWorksERD.jpeg)
 - [Conceptual Diagram](https://github.com/muriloferreiravitor/adventure_works/blob/main/Conceptual%20Diagram.pdf)
 - [dbt Project Documentation](https://muriloferreiravitor.github.io/adventure_works/)  
 - [Power BI Dashboard](https://github.com/muriloferreiravitor/adventure_works/blob/main/dashboard__aec__adventure_works.pbix)
