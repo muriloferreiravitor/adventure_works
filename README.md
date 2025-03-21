@@ -59,7 +59,7 @@ Development of a **Power BI DataViz Dashboard** featuring:
 - [Conceptual Diagram](https://github.com/muriloferreiravitor/adventure_works/blob/main/Conceptual%20Diagram.pdf)
 - [dbt Project Documentation](https://muriloferreiravitor.github.io/adventure_works/)  
 - [Power BI Dashboard](https://github.com/muriloferreiravitor/adventure_works/blob/main/dashboard__aec__adventure_works.pbix)
-- [Presentation Video](#) <!-- Insert link -->  
+- [Presentation Video](https://www.youtube.com/watch?v=a_48Dht-u4M)  
 
 ## **Contact**  
 For any questions or suggestions, feel free to connect via [LinkedIn](https://linkedin.com/in/muriloferreiravitor).
